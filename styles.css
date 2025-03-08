@@ -1,5 +1,3 @@
-
-
 body {
   margin: 0;
   padding: 0;
@@ -7,20 +5,19 @@ body {
 }
 
 h1 {
-color: white;
+  color: white;
   font-family: "Arial";
   font-size: 55px;
-  
 }
 
 /* Style the Top Bar */
 .top-bar {
- display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   padding: 15px 30px;
-  color: violet;
+  color: violet; /* Set the color to violet for the text */
   font-family: "Arial";
 }
 
@@ -28,7 +25,7 @@ color: white;
 .top-bar .logo a {
   font-size: 24px;
   font-weight: bold;
-  color: white;
+  color: violet; /* Use violet color here for consistency */
   text-decoration: none; /* Removes underline from link */
   font-family: "Arial";
 }
@@ -45,7 +42,7 @@ color: white;
 .nav-links a {
   margin-left: 20px;
   font-size: 18px;
-  color: white;
+  color: violet; /* Use violet color for navigation links */
   text-decoration: none;
 }
 
