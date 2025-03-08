@@ -17,7 +17,7 @@ h1 {
   align-items: center;
   background-color: white;
   padding: 15px 30px;
-  color: violet; /* Set the color to violet for the text */
+  color: blue; /* Set the color to violet for the text */
   font-family: "Arial";
 }
 
@@ -25,7 +25,7 @@ h1 {
 .top-bar .logo a {
   font-size: 24px;
   font-weight: bold;
-  color: violet; /* Use violet color here for consistency */
+  color: blue; /* Use violet color here for consistency */
   text-decoration: none; /* Removes underline from link */
   font-family: "Arial";
 }
@@ -42,7 +42,7 @@ h1 {
 .nav-links a {
   margin-left: 20px;
   font-size: 18px;
-  color: violet; /* Use violet color for navigation links */
+  color: blue; /* Use violet color for navigation links */
   text-decoration: none;
 }
 
