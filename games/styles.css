@@ -10,6 +10,9 @@ h1 {
   font-size: 55px;
 }
 
+
+button {background-color: white; color: violet;}
+
 /* Style the Top Bar */
 .top-bar {
   display: flex;
