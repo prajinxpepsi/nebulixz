@@ -27,9 +27,10 @@ padding: 10px 20px;
 }
 
 .gamebutton img {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   border-radius: 25px;
+  text-align: center;
 }
 
 
