@@ -21,6 +21,9 @@ background-color: white
   text-align: center;
   font-size: 25px;
   border-radius: 25px;
+   align-items: center;
+   justify-content: space-evenly;
+    cursor: pointer;
 
   
 }
