@@ -25,9 +25,30 @@
   </div>
   
 <center><h1>nebulixz</h1></center>
-<center><p>explore the nebulixz of games</p></center>
+<center><p id="textchanger">explore the nebulixz of games</p></center>
 
-  
+
+
+   <script>
+    // Array of different text options for the paragraph
+    const texts = [
+      "1v1.lol will probably stay broken",
+      "why is there a z at the end of nebulixz",
+      "join the nebulixz community today",
+      "your adventure in nebulixz begins here",
+      "explore, play, and enjoy at nebulixz",
+      "the ultimate gaming experience awaits"
+    ];
+
+    // Function to pick a random text from the array and set it to the paragraph
+    function changeText() {
+      const randomIndex = Math.floor(Math.random() * texts.length);
+      document.getElementById("textchanger").textContent = texts[randomIndex];
+    }
+
+    // Call the changeText function when the page loads
+    window.onload = changeText;
+  </script>
 
 </body>
 
