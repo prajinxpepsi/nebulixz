@@ -10,6 +10,10 @@ h1 {
   color: white;
   font-size: 100px;
   text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: flex-end; /* Vertically align content to the bottom */
+  height: 100%; /* Ensure the container takes up the full height */
 }
 
 h2 {
