@@ -1,73 +1,53 @@
-/* RESET */
-* {
+/* ===== GENERAL PAGE STYLE ===== */
+body {
+  background-color: #000000;        /* Pure black */
+  color: #b060ff;                   /* Soft neon purple text */
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* Background */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  min-height: 100vh;
-  color: white;
-  overflow-x: hidden;
-}
-
-/* Top Navigation Bar (glass style) */
+/* ===== TOP BAR ===== */
 .top-bar {
+  background-color: #0a0014;        /* Dark purple-black */
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(10px);
-  padding: 15px 40px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 2px solid #8a2be2; /* Purple underline */
 }
 
-.logo a {
-  font-size: 26px;
-  font-weight: bold;
-  color: white;
+.top-bar a {
+  color: #c483ff;
   text-decoration: none;
-}
-
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #ffffffcc;
   font-size: 18px;
-  transition: 0.25s;
+  margin-left: 20px;
+  transition: 0.2s;
 }
 
-.nav-links a:hover {
-  color: #ffdf7f;
-  transform: translateY(-2px);
+.top-bar a:hover {
+  color: #e6c4ff;
+  text-shadow: 0 0 8px #d19aff;
 }
 
-/* Title and tagline */
-.title {
-  margin-top: 120px;
-  font-size: 85px;
-  font-weight: bold;
-  text-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
-  animation: fadeIn 1s ease;
+/* ===== MAIN TITLE ===== */
+h1 {
+  color: #d29bff;
+  font-size: 48px;
+  margin-top: 40px;
 }
 
-.tagline {
-  margin-top: 10px;
-  font-size: 32px;
-  color: #ffffffd9;
-  opacity: 1;
-  transition: opacity 0.4s ease-in-out;
+/* ===== TAGLINE TEXT ===== */
+#textchanger {
+  font-size: 20px;
+  color: #bb80ff;
 }
 
-/* Fade In Animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(25px); }
-  to { opacity: 1; transform: translateY(0); }
+/* ===== LINKS (GENERAL) ===== */
+a {
+  color: #c58aff;
+}
+
+a:hover {
+  color: #e6c4ff;
 }
