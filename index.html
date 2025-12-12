@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-<title>home - nebulixz</title>
+  <title>home - nebulixz</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-
-
 </head>
 
 <body>
@@ -23,14 +20,13 @@
       <a href="settings.html">Settings</a>
     </div>
   </div>
-  
-<center><h1>nebulixz</h1></center>
-<center><p id="textchanger">explore the nebulixz of games</p></center>
 
+  <center>
+    <h1 class="title">nebulixz</h1>
+    <p id="textchanger" class="tagline">explore the nebulixz of games</p>
+  </center>
 
-
-   <script>
-    // Array of different text options for the paragraph
+  <script>
     const texts = [
       "1v1.lol will probably stay broken",
       "why is there a z at the end of nebulixz",
@@ -38,20 +34,30 @@
       "check out snacker's game shack",
       "who let goguardian cook",
       "thanks for using nebulixz!",
-      "placeholder",
+      "placeholder"
+      "go back to studying unc"
+      "TTAACOOOO TUUEEESSDAAYYYYY",
+      "ts generation is fried"
+      "ts does not mean ""this"" twin 😭😭"
     ];
 
-    // Function to pick a random text from the array and set it to the paragraph
     function changeText() {
-      const randomIndex = Math.floor(Math.random() * texts.length);
-      document.getElementById("textchanger").textContent = texts[randomIndex];
+      const el = document.getElementById("textchanger");
+      el.style.opacity = 0;
+
+      setTimeout(() => {
+        const randomIndex = Math.floor(Math.random() * texts.length);
+        el.textContent = texts[randomIndex];
+        el.style.opacity = 1;
+      }, 300);
     }
 
-    // Call the changeText function when the page loads
-    window.onload = changeText;
+    window.onload = () => {
+      changeText();
+      setInterval(changeText, 4000);
+    };
   </script>
 
 </body>
-
 
 </html>
