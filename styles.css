@@ -1,53 +1,106 @@
-/* ===== GENERAL PAGE STYLE ===== */
+/* ===== ANIMATED BACKGROUND GRADIENT ===== */
 body {
-  background-color: #000000;        /* Pure black */
-  color: #b060ff;                   /* Soft neon purple text */
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+  color: #e7c8ff;
+  background: linear-gradient(-45deg, #000000, #19002d, #2b0050, #000000);
+  background-size: 400% 400%;
+  animation: bgAnimation 12s ease infinite;
+}
+
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* ===== TOP BAR ===== */
 .top-bar {
-  background-color: #0a0014;        /* Dark purple-black */
+  background: rgba(0, 0, 0, 0.65);
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #8a2be2; /* Purple underline */
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid #7a00ff;
+  box-shadow: 0 0 15px #7a00ff50;
 }
 
+/* Logo + Nav Links */
 .top-bar a {
-  color: #c483ff;
+  color: #d6a8ff;
   text-decoration: none;
-  font-size: 18px;
-  margin-left: 20px;
-  transition: 0.2s;
+  font-size: 20px;
+  margin-left: 25px;
+  transition: 0.25s ease;
+  position: relative;
 }
 
+/* Animated underline */
+.top-bar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background: #b56cff;
+  transition: width 0.3s ease;
+}
+
+.top-bar a:hover::after {
+  width: 100%;
+}
+
+/* Glow on hover */
 .top-bar a:hover {
-  color: #e6c4ff;
-  text-shadow: 0 0 8px #d19aff;
+  color: #f3dbff;
+  text-shadow: 0 0 8px #c06cff, 0 0 12px #b56cff;
 }
 
 /* ===== MAIN TITLE ===== */
 h1 {
-  color: #d29bff;
-  font-size: 48px;
-  margin-top: 40px;
+  font-size: 55px;
+  margin-top: 50px;
+  color: #e9c0ff;
+  text-shadow: 0 0 20px #a44bff, 0 0 35px #7a00ff;
+  animation: fadeIn 1.5s ease;
 }
 
-/* ===== TAGLINE TEXT ===== */
+/* ===== ROTATING TEXT TAGLINE ===== */
 #textchanger {
-  font-size: 20px;
-  color: #bb80ff;
+  font-size: 22px;
+  color: #d7b2ff;
+  text-shadow: 0 0 10px #a15cff;
+  animation: fadeIn 2s ease;
 }
 
-/* ===== LINKS (GENERAL) ===== */
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== GENERAL LINKS STYLING ===== */
 a {
-  color: #c58aff;
+  color: #d6a8ff;
+  transition: 0.25s;
 }
 
 a:hover {
-  color: #e6c4ff;
+  color: #fce6ff;
+  text-shadow: 0 0 10px #c979ff;
+}
+
+/* Optional container styling if needed */
+.container {
+  padding: 15px;
+  background: rgba(0,0,0,0.45);
+  border-radius: 12px;
+  box-shadow: 0 0 20px #9c3dff50;
+  backdrop-filter: blur(5px);
+  margin: 20px auto;
+  width: 80%;
+  animation: fadeIn 1.2s ease;
 }
