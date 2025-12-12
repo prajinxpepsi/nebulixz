@@ -1,10 +1,11 @@
-/* ===== ANIMATED BACKGROUND GRADIENT ===== */
+/* ===== ANIMATED BACKGROUND (NO MORE SPLIT) ===== */
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Orbitron', sans-serif;
   color: #e7c8ff;
-  background: linear-gradient(-45deg, #000000, #19002d, #2b0050, #000000);
+
+  background: linear-gradient(-45deg, #0d001a, #1a0033, #26004d, #0d001a);
   background-size: 400% 400%;
   animation: bgAnimation 12s ease infinite;
 }
@@ -17,27 +18,26 @@ body {
 
 /* ===== TOP BAR ===== */
 .top-bar {
-  background: rgba(0, 0, 0, 0.65);
-  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 18px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
   border-bottom: 2px solid #7a00ff;
   box-shadow: 0 0 15px #7a00ff50;
 }
 
-/* Logo + Nav Links */
+/* ===== NAVIGATION LINKS ===== */
 .top-bar a {
   color: #d6a8ff;
   text-decoration: none;
-  font-size: 20px;
-  margin-left: 25px;
-  transition: 0.25s ease;
+  font-size: 22px;
+  transition: 0.25s;
   position: relative;
 }
 
-/* Animated underline */
+/* Neon underline animation */
 .top-bar a::after {
   content: "";
   position: absolute;
@@ -45,8 +45,8 @@ body {
   height: 2px;
   left: 0;
   bottom: -3px;
-  background: #b56cff;
-  transition: width 0.3s ease;
+  background: #c979ff;
+  transition: width 0.3s;
 }
 
 .top-bar a:hover::after {
@@ -55,52 +55,30 @@ body {
 
 /* Glow on hover */
 .top-bar a:hover {
-  color: #f3dbff;
-  text-shadow: 0 0 8px #c06cff, 0 0 12px #b56cff;
+  color: #f8e6ff;
+  text-shadow: 0 0 8px #d57bff, 0 0 14px #b56cff;
 }
 
 /* ===== MAIN TITLE ===== */
 h1 {
-  font-size: 55px;
-  margin-top: 50px;
-  color: #e9c0ff;
-  text-shadow: 0 0 20px #a44bff, 0 0 35px #7a00ff;
+  font-size: 70px;
+  margin-top: 60px;
+  color: #e7c8ff;
+  text-shadow: 0 0 15px #a44bff, 0 0 35px #7a00ff;
   animation: fadeIn 1.5s ease;
 }
 
-/* ===== ROTATING TEXT TAGLINE ===== */
+/* ===== ROTATING TAGLINE ===== */
 #textchanger {
-  font-size: 22px;
-  color: #d7b2ff;
+  font-size: 28px;
+  color: #d2adff;
   text-shadow: 0 0 10px #a15cff;
   animation: fadeIn 2s ease;
+  margin-top: -20px;
 }
 
-/* Fade-in animation */
+/* Fade-in effect */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===== GENERAL LINKS STYLING ===== */
-a {
-  color: #d6a8ff;
-  transition: 0.25s;
-}
-
-a:hover {
-  color: #fce6ff;
-  text-shadow: 0 0 10px #c979ff;
-}
-
-/* Optional container styling if needed */
-.container {
-  padding: 15px;
-  background: rgba(0,0,0,0.45);
-  border-radius: 12px;
-  box-shadow: 0 0 20px #9c3dff50;
-  backdrop-filter: blur(5px);
-  margin: 20px auto;
-  width: 80%;
-  animation: fadeIn 1.2s ease;
 }
