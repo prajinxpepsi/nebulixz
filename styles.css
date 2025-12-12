@@ -1,84 +1,96 @@
-/* ===== ANIMATED BACKGROUND (NO MORE SPLIT) ===== */
+/* ===== IMPORT GAMING FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* ===== GLOBAL PAGE STYLE ===== */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Orbitron', sans-serif;
   color: #e7c8ff;
 
-  background: linear-gradient(-45deg, #0d001a, #1a0033, #26004d, #0d001a);
-  background-size: 400% 400%;
-  animation: bgAnimation 12s ease infinite;
+  /* Fully seamless animated gradient */
+  background: linear-gradient(130deg, #080010, #19002a, #260040, #100018);
+  background-size: 350% 350%;
+  animation: nebulaFlow 18s ease-in-out infinite;
 }
 
-@keyframes bgAnimation {
+/* Smooth multi-direction flow animation (NO VISIBLE LINES EVER) */
+@keyframes nebulaFlow {
   0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
   50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
   100% { background-position: 0% 50%; }
 }
 
-/* ===== TOP BAR ===== */
+/* ===== TOP NAV BAR ===== */
 .top-bar {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.55);
   padding: 18px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(8px);
-  border-bottom: 2px solid #7a00ff;
-  box-shadow: 0 0 15px #7a00ff50;
+
+  border-bottom: 2px solid #b24cff;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px #7a00ff55;
 }
 
-/* ===== NAVIGATION LINKS ===== */
+/* NAV LINKS STYLE */
 .top-bar a {
-  color: #d6a8ff;
+  color: #e3baff;
+  font-size: 20px;
   text-decoration: none;
-  font-size: 22px;
-  transition: 0.25s;
-  position: relative;
+  margin-left: 15px;
+  transition: 0.25s ease;
+  text-shadow: 0 0 5px #9b54ff;
 }
 
-/* Neon underline animation */
-.top-bar a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  bottom: -3px;
-  background: #c979ff;
-  transition: width 0.3s;
-}
-
-.top-bar a:hover::after {
-  width: 100%;
-}
-
-/* Glow on hover */
 .top-bar a:hover {
-  color: #f8e6ff;
-  text-shadow: 0 0 8px #d57bff, 0 0 14px #b56cff;
+  color: #ffffff;
+  text-shadow: 0 0 10px #d98dff, 0 0 20px #b24cff;
 }
 
 /* ===== MAIN TITLE ===== */
 h1 {
   font-size: 70px;
   margin-top: 60px;
-  color: #e7c8ff;
-  text-shadow: 0 0 15px #a44bff, 0 0 35px #7a00ff;
-  animation: fadeIn 1.5s ease;
+  margin-bottom: 10px;
+  color: #f1d7ff;
+
+  text-shadow: 
+    0 0 15px #a44bff,
+    0 0 35px #8d00ff,
+    0 0 70px #6a00d0;
+
+  animation: fadeIn 1.5s ease-out;
 }
 
-/* ===== ROTATING TAGLINE ===== */
+/* TAGLINE UNDER TITLE */
 #textchanger {
   font-size: 28px;
   color: #d2adff;
-  text-shadow: 0 0 10px #a15cff;
-  animation: fadeIn 2s ease;
-  margin-top: -20px;
+  margin-top: -10px;
+
+  text-shadow: 
+    0 0 8px #a15cff,
+    0 0 15px #6e2bff;
+
+  animation: fadeIn 2.5s ease-out;
 }
 
-/* Fade-in effect */
+/* Fade-in animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(15px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== LINK STYLE FOR OTHER PAGES ===== */
+a {
+  color: #d7b0ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 10px #d68aff, 0 0 20px #9e4aff;
 }
